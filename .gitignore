@@ -1,3 +1,4 @@
 /node_modules
 *.ttf
 *.otf
+.DS_Store
