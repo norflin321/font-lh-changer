@@ -1,7 +1,7 @@
 Change values of these variables in index.js
 ------------
     const FONT_FILE = "font.otf";
-    const INCREASE_BY = 500;
+    const CHANGE_BY = 500;
     const NEW_NAME = ""; // change if want to rename
 
 Run it
