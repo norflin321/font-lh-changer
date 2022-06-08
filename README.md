@@ -5,7 +5,7 @@ Change values of these variables in index.js
 
 Run it
 ------------
-    npm install
+    npm i
     node index.js
 
 Result
