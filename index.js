@@ -1,7 +1,7 @@
 const opentype = require('opentype.js');
 
-const FONT_FILE = "./font.otf"; // change
-const INCREASE_BY = 500; // change
+const FONT_FILE = "./font.otf";
+const INCREASE_BY = 500;
 
 (async () => {
   try {
