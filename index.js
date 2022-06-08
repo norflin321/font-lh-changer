@@ -1,6 +1,6 @@
 const opentype = require('opentype.js');
 
-const FONT_FILE = "font.otf";
+const FONT_FILE = "font.ttf";
 const CHANGE_BY = 500;
 const NEW_NAME = ""; // change if want to rename
 
@@ -17,11 +17,16 @@ const NEW_NAME = ""; // change if want to rename
 
     let newFileName = FONT_FILE;
     if (NEW_NAME) {
-      font.names.fontFamily.en = NEW_NAME;
-      font.names.fullName.en = NEW_NAME;
-      font.names.preferredFamily.en = NEW_NAME;
-      font.names.postScriptName.en = NEW_NAME;
-      font.names.compatibleFullName.en = NEW_NAME;
+      // change font names
+      const nameProps = ['fontFamily', 'fullName', 'preferredFamily', 'compatibleFullName'];
+      for (const prop of nameProps) {
+        try {
+          for (const key in font.names[prop]) font.names[prop][key] = NEW_NAME;
+        } catch {
+          continue;
+        }
+      }
+      // change file name
       const arr = FONT_FILE.split(".");
       const fileExt = arr[arr.length - 1];
       newFileName = NEW_NAME + `.${fileExt}`;
