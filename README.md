@@ -1,6 +1,6 @@
 Change values of these variables in index.js
 ------------
-    const FONT_FILE = "./font.otf";
+    const FONT_FILE = "./font.ttf";
     const INCREASE_BY = 500;
 
 Run it
