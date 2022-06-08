@@ -18,7 +18,7 @@ const NEW_NAME = ""; // change if want to rename
     let newFileName = FONT_FILE;
     if (NEW_NAME) {
       // change font names
-      const nameProps = ['fontFamily', 'fullName', 'preferredFamily', 'compatibleFullName'];
+      const nameProps = ['fontFamily', 'fullName', 'preferredFamily', 'compatibleFullName', 'postScriptName'];
       for (const prop of nameProps) {
         try {
           for (const key in font.names[prop]) font.names[prop][key] = NEW_NAME;
